@@ -1,0 +1,62 @@
+$bgcolor: #3F6592;
+$bodycolor: white;
+$padding: 0px;
+$textwhite: #fff;
+$textblue: #3F6592;
+$font: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
+
+body {
+    background-color: $bgcolor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+header {
+    background-color: $bgcolor;
+
+}
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 2em;
+    margin-top: $padding;
+    margin-bottom: $padding+20;
+
+}
+.nav-link {
+    text-decoration: none;
+    text-transform: lowercase;
+    color: $textwhite;
+    font-family: $font;
+}
+main {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:center;
+    margin: 0 20% 0 20%;
+    box-shadow: 0px 0px 18px 4px rgb(0, 0, 0);
+}
+
+.left {
+    width: 30%;
+    background-color: $bgcolor;
+    margin-top: 20px;
+
+}
+.right {
+    width: 70%;
+    background-color: $bodycolor;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 4px rgba(255,255,255,1);
+    margin: 0 auto;
+}
