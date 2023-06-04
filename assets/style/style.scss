@@ -10,7 +10,9 @@ body {
     background-color: $bgcolor;
     display: flex;
     flex-direction: column;
-    justify-content: center;   
+    justify-content: center;  
+    min-width: 320px;
+    min-height: 100vh; 
 }
 
 header {
@@ -36,27 +38,83 @@ header {
 main {
     display: flex;
     flex-direction:row;
-    align-items: center;
-    justify-content:center;
-    margin: 0 20% 0 20%;
+    min-width: 1280px;
+    margin: 0 auto;
     box-shadow: 0px 0px 18px 4px rgb(0, 0, 0);
 }
 
 .left {
     width: 30%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
     background-color: $bgcolor;
     margin-top: 20px;
-
+    & img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 4px rgba(255,255,255,1);
+    }
 }
+
 .right {
     width: 70%;
     background-color: $bodycolor;
 }
 
-.logo {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 0px 4px rgba(255,255,255,1);
-    margin: 0 auto;
+h1 {
+    font-family: $font;
+    font-size: 5em;
+    text-transform:uppercase;
+    padding-left: 0.5em;
+    color: $textblue;
+    letter-spacing: 10px;
+}
+
+h2 {
+    font-family: $font;
+    font-size: 2em;
+    padding-left: 2em;
+    color: $textblue;
+    letter-spacing: 2px;
+    margin-top: -40px;
+    margin-bottom: 10px;
+}
+.section-name {
+    margin-left: 1em;
+    font-family: $font;
+    font-size: 1.7em;
+    color: $textwhite;
+    border-bottom: 2px solid $bodycolor;
+    padding-left: 0.5em;
+    font-weight: bold;
+}
+
+.section-item {
+    font-family: $font;
+    font-size: 1.5em;
+    color: $textwhite;
+    list-style: none;
+    position: relative;
+    margin-top: -15px;
+}
+.section-list {
+    margin-top: -25px;
+    padding-left: 0.5em;
+    & a{
+        text-decoration: none;
+        color: $textwhite;
+    }
+}
+.outline {
+    width: 95%;
+    font-family: $font;
+    font-size: 1.7em;
+    color: $textblue;
+    border-bottom: 2px solid $bgcolor;
+    padding-left: 0.5em;
+    font-weight: bold;
 }

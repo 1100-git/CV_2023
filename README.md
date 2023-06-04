@@ -1,1 +1,1 @@
-# CV_2023
+https://1100..github.io/rsschool-cv/
