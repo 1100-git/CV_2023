@@ -31,7 +31,7 @@ header {
   transition: color 0.5s;
 }
 .nav-list a:hover {
-  color: #a8b2f6;
+  color: #b4b4b4;
 }
 
 .nav-link {
@@ -121,7 +121,7 @@ h2 {
   transition: color 0.5s;
 }
 .section-list a:hover {
-  color: #a8b2f6;
+  color: #b4b4b4;
 }
 
 .outline {
