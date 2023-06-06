@@ -3,8 +3,8 @@ $bodycolor: white;
 $padding: 0px;
 $textwhite: #fff;
 $textblue: #3F6592;
-$hcolor: #b4b4b4;
 $font: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$tablet: 910px;
 @mixin outline ($width: 93%) {
     font-family: $font;
     color: $textblue;
@@ -17,7 +17,9 @@ $font: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 *{
 	box-sizing: border-box;
 }
-
+html {
+	scroll-behavior: smooth;
+}
 body {
     background-color: $bgcolor;
     display: flex;
@@ -43,9 +45,9 @@ header {
         font-weight: 700;
         text-transform: uppercase;
         text-decoration: none;
-        transition: color 0.5s;
+        transition: color 0.3s;
         &:hover {
-            color: $hcolor;
+            color: darken($bodycolor, 30%);
         }
     }
 
@@ -127,11 +129,12 @@ h2 {
     margin-top: -25px;
     padding-left: 0.5em;
     & a{
+        scroll-behavior: smooth;
         text-decoration: none;
         color: $textwhite;
-        transition: color 0.5s;
+        transition: color 0.3s;
         &:hover {
-            color: $hcolor;
+            color: darken($bodycolor, 30%);
         }
     }
 }
@@ -150,4 +153,63 @@ h2 {
 .outline-item-list {
     @include outline(96%);
     margin-left:0;
+}
+.toggle {
+    width: 100%;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	margin-top: 1px;
+	cursor: pointer;
+	user-select: none;
+	z-index: 15;
+    float: right;
+    @media (max-width: $tablet) {
+        display: flex;
+        margin-bottom: -40px;
+}
+}
+.toggle div {
+	width: 80%;
+	height: 2px;
+	background: $bgcolor;
+	margin: 3px 0;
+	z-index: 15;
+}
+
+.toggle.collapsed .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle.collapsed .line2 {
+	opacity: 0;
+}
+
+.toggle.collapsed .line3 {
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+@media (max-width: 910px) {
+	.nav {
+		display: none;
+	}
+
+    .section-list {
+       margin-top: -20px;  
+    }
+    h2 {
+        margin-top: -20px;
+        font-size: 3vw;
+    }
+    h1 {
+        font-size: 6vw;
+    }
+    .outline, .section-name, .outline-item-list, .outline-item, .section-item {
+        font-size: 1em;
+    }
+    .section-item{
+        margin-left: -30px;
+    }
 }
