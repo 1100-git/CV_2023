@@ -114,10 +114,30 @@ h2 {
   position: relative;
   margin-top: -15px;
 }
+.section-item a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+.section-item a:hover {
+  color: #b3b3b3;
+}
+@media (max-width: 391px) {
+  .section-item {
+    font-size: 0.7em !important;
+  }
+}
 
 .section-list {
   margin-top: -25px;
   padding-left: 0.5em;
+}
+@media (max-width: 391px) {
+  .section-list {
+    margin-left: -13px !important;
+    margin-top: -15px !important;
+    font-size: 1em !important;
+  }
 }
 .section-list a {
   scroll-behavior: smooth;
@@ -147,6 +167,11 @@ h2 {
   text-align: justify;
   width: 93%;
 }
+@media (max-width: 391px) {
+  .outline-item {
+    font-size: 0.8em !important;
+  }
+}
 
 .outline-item-list {
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -156,6 +181,12 @@ h2 {
   text-align: justify;
   width: 96%;
   margin-left: 0;
+}
+@media (max-width: 391px) {
+  .outline-item-list {
+    font-size: 0.8em !important;
+    margin-left: -15px;
+  }
 }
 
 .toggle {
@@ -199,6 +230,24 @@ h2 {
 
 .toggle.collapsed .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.footer-container {
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  color: #3F6592;
+  font-size: 1.5em;
+  margin-left: 3%;
+  text-align: justify;
+  width: 93%;
+  font-size: 2vw;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.projects {
+  text-decoration: none;
 }
 
 @media (max-width: 910px) {

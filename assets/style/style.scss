@@ -5,6 +5,7 @@ $textwhite: #fff;
 $textblue: #3F6592;
 $font: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 $tablet: 910px;
+$phone: 391px;
 @mixin outline ($width: 93%) {
     font-family: $font;
     color: $textblue;
@@ -124,10 +125,26 @@ h2 {
     list-style: none;
     position: relative;
     margin-top: -15px;
+    & a {
+        text-decoration: none;
+        color: $textwhite;
+        transition: color 0.3s;
+        &:hover {
+            color: darken($bodycolor, 30%);
+        }
+    }
+    @media (max-width: ($phone)) {
+        font-size: 0.7em!important;
+        }    
 }
 .section-list {
     margin-top: -25px;
     padding-left: 0.5em;
+    @media (max-width: ($phone)) {
+        margin-left: -13px!important;
+        margin-top: -15px!important;
+        font-size: 1em!important;
+    }
     & a{
         scroll-behavior: smooth;
         text-decoration: none;
@@ -149,10 +166,17 @@ h2 {
 }
 .outline-item {
     @include outline();
+    @media (max-width: ($phone)) {
+        font-size: 0.8em!important;
+    }
 }
 .outline-item-list {
     @include outline(96%);
     margin-left:0;
+    @media (max-width: ($phone)) {
+    font-size: 0.8em!important;
+    margin-left: -15px;
+    }
 }
 .toggle {
     width: 100%;
@@ -190,6 +214,17 @@ h2 {
 
 .toggle.collapsed .line3 {
 	transform: rotate(45deg) translate(-5px, -6px);
+}
+.footer-container {
+    @include outline(93%);
+    font-size: 2vw;
+    color: $textwhite;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.projects {
+    text-decoration: none;
 }
 @media (max-width: 910px) {
 	.nav {
