@@ -13,15 +13,6 @@ burger.addEventListener('click',
   }
 );
 
-menuLinks.forEach(function (el) {
-  el.addEventListener('click',
-    function () {
-      burger.classList.remove("header-btn-active");
-      menu.classList.remove("nav-active");
-      document.body.classList.remove("stop-scroll");
-    })
-});
-
 body.addEventListener('click',
   function (el) {
     if (el.target !== burger && el.target !== menu) {
