@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  transition: all 1s ease 0s;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -25,7 +26,7 @@ header {
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  font-size: 2vw;
+  font-size: 1.5vw;
   margin-top: 0px;
   margin-bottom: 20px;
 }
@@ -41,7 +42,7 @@ header {
 
 .nav-link {
   color: #fff;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .mav-item {
@@ -79,8 +80,8 @@ main {
 }
 
 h1 {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-  font-size: 5vw;
+  font-family: "Open Sans", sans-serif;
+  font-size: 4vw;
   text-decoration: none;
   text-transform: uppercase;
   padding-left: 0.5em;
@@ -97,7 +98,7 @@ h1 a:hover {
 }
 
 h2 {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 2vw;
   padding-left: 2em;
   color: #3F6592;
@@ -108,7 +109,7 @@ h2 {
 
 .section-name {
   margin-left: 1em;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.7em;
   color: #fff;
   border-bottom: 2px solid white;
@@ -117,7 +118,7 @@ h2 {
 }
 
 .section-item {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.5em;
   color: #fff;
   list-style: none;
@@ -165,7 +166,7 @@ h2 {
 
 .outline {
   width: 97%;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.7em;
   color: #3F6592;
   border-bottom: 2px solid #3F6592;
@@ -174,7 +175,7 @@ h2 {
 }
 
 .outline-item {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #3F6592;
   font-size: 1.5em;
   margin-left: 3%;
@@ -188,7 +189,7 @@ h2 {
 }
 
 .outline-item-list {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #3F6592;
   font-size: 1.5em;
   margin-left: 3%;
@@ -234,7 +235,7 @@ h2 {
 }
 
 .footer-container {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #3F6592;
   font-size: 1.5em;
   margin-left: 3%;
@@ -263,7 +264,7 @@ h2 {
     position: absolute;
     width: 30px;
     height: 20px;
-    z-index: 3;
+    z-index: 30;
   }
   .header-btn ::before {
     content: "";
@@ -295,14 +296,17 @@ h2 {
     transform: rotate(45deg);
     top: 0;
     background-color: white;
+    z-index: 30;
   }
   .header-btn-active ::after {
     transform: rotate(-45deg);
     top: 0;
     background-color: white;
+    z-index: 30;
   }
   .header-btn-active span {
     height: 0px;
+    z-index: 30;
   }
   .nav {
     padding-top: 24px;

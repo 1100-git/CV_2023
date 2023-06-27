@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 $bgcolor: #3F6592;
 $bodycolor: white;
 $padding: 0px;
 $textwhite: #fff;
 $textblue: #3F6592;
-$font: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$font: 'Open Sans', sans-serif;
 $tablet: 910px;
 $phone: 391px;
 @mixin outline ($width: 93%) {
@@ -27,7 +29,7 @@ $phone: 391px;
 }
 html {
 	scroll-behavior: smooth;
-    transition: all 1s ease 0s;
+    font-family: $font;
 }
 body {
     background-color: $bgcolor;
@@ -47,7 +49,7 @@ header {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    font-size: 2vw;
+    font-size: 1.5vw;
     margin-top: $padding;
     margin-bottom: $padding+20;
     a {
@@ -100,7 +102,7 @@ main {
 
 h1 {
     font-family: $font;
-    font-size: 5vw;
+    font-size: 4vw;
     text-decoration: none;
     text-transform:uppercase;
     padding-left: 0.5em;
@@ -247,7 +249,7 @@ h2 {
         position: absolute;
         width: 30px;
         height: 20px;
-        z-index: 3;
+        z-index: 30;
     }
     .header-btn ::before{
         @include beafter();
@@ -267,14 +269,17 @@ h2 {
         transform: rotate(45deg);
         top:0;
         background-color: $bodycolor;
+        z-index: 30;
     }
     .header-btn-active ::after{
         transform: rotate(-45deg);
         top:0;
         background-color: $bodycolor;
+        z-index: 30;
     }
     .header-btn-active span{
         height: 0px;
+        z-index: 30;
     }
     .nav {
         padding-top:24px;
