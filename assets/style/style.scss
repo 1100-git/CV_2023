@@ -56,7 +56,7 @@ header {
         font-weight: 700;
         text-transform: uppercase;
         text-decoration: none;
-        transition: color 0.3s;
+        transition: color 0.3s linear;
         &:hover {
             color: darken($bodycolor, 30%);
         }
@@ -110,7 +110,7 @@ h1 {
     letter-spacing: 10px;
     & a {
         text-decoration: none;
-        transition: color 0.3s;
+        transition: color 0.3s linear;
         color: $textblue;
         &:hover {
             color: darken($bgcolor, 20%);
@@ -147,14 +147,14 @@ h2 {
     & a {
         text-decoration: none;
         color: $textwhite;
-        transition: color 0.3s;
+        transition: color 0.3s linear;
         &:hover {
             color: darken($bodycolor, 30%);
         }
     }
     & li:hover{
         color: darken($bodycolor, 20%);
-        transition: color 0.3s;
+        transition: color 0.3s linear;
         cursor: default;
     }
     @media (max-width: ($phone)) {
@@ -172,7 +172,7 @@ h2 {
     & a{
         text-decoration: none;
         color: $textwhite;
-        transition: color 0.3s;
+        transition: color 0.3s linear;
         &:hover {
             color: darken($bodycolor, 30%);
         }
@@ -199,10 +199,13 @@ h2 {
     @media (max-width: ($phone)) {
     font-size: 0.8em!important;
     margin-left: -15px;
-    }
-    & li:hover {
+}
+& li{
+    transition: all 0.3s;
+}
+& li:hover {
         background-color: darken($bodycolor, 10%);
-        transition: all 1s ease 0s;
+        color: darken($textblue, 20%);
         cursor: default;
         border-radius: 3px;
         box-shadow: 0px 0px 11px 2px rgb(207, 207, 207);
@@ -228,7 +231,7 @@ h2 {
 }
 .footer-container {
     @include outline(93%);
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: $textwhite;
     display: flex;
     justify-content: center;
@@ -254,12 +257,12 @@ h2 {
     .header-btn ::before{
         @include beafter();
         bottom:9px;
-        transition: all 0.3s ease 0s;
+        transition: all 0.3s linear;
     }
     .header-btn ::after {
         @include beafter();
         top:9px;
-        transition: all 0.3s ease 0s;
+        transition: all 0.3s linear;
     }
     .header-btn span {
         @include beafter();
@@ -290,12 +293,12 @@ h2 {
         z-index: 2;
         background-color: $bgcolor;
         top:-100%;
-        transition: all 0.5s ease 0s;
+        transition: all 0.5s linear;
         overflow: auto;
 	}
     .nav-active{
         top:8px;
-        transition: all 0.3s ease 0s;
+        transition: all 0.3s linear;
     }
     .nav-list{
         display: block;

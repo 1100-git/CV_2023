@@ -34,7 +34,7 @@ header {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s linear;
 }
 .nav-list a:hover {
   color: #b3b3b3;
@@ -90,7 +90,7 @@ h1 {
 }
 h1 a {
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s linear;
   color: #3F6592;
 }
 h1 a:hover {
@@ -128,14 +128,14 @@ h2 {
 .section-item a {
   text-decoration: none;
   color: #fff;
-  transition: color 0.3s;
+  transition: color 0.3s linear;
 }
 .section-item a:hover {
   color: #b3b3b3;
 }
 .section-item li:hover {
   color: #cccccc;
-  transition: color 0.3s;
+  transition: color 0.3s linear;
   cursor: default;
 }
 @media (max-width: 391px) {
@@ -158,7 +158,7 @@ h2 {
 .section-list a {
   text-decoration: none;
   color: #fff;
-  transition: color 0.3s;
+  transition: color 0.3s linear;
 }
 .section-list a:hover {
   color: #b3b3b3;
@@ -203,9 +203,12 @@ h2 {
     margin-left: -15px;
   }
 }
+.outline-item-list li {
+  transition: all 0.3s;
+}
 .outline-item-list li:hover {
   background-color: #e6e6e6;
-  transition: all 1s ease 0s;
+  color: #20344b;
   cursor: default;
   border-radius: 3px;
   box-shadow: 0px 0px 11px 2px rgb(207, 207, 207);
@@ -241,7 +244,7 @@ h2 {
   margin-left: 3%;
   text-align: justify;
   width: 93%;
-  font-size: 2vw;
+  font-size: 1.5vw;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -273,7 +276,7 @@ h2 {
     width: 100%;
     height: 2px;
     bottom: 9px;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s linear;
   }
   .header-btn ::after {
     content: "";
@@ -282,7 +285,7 @@ h2 {
     width: 100%;
     height: 2px;
     top: 9px;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s linear;
   }
   .header-btn span {
     content: "";
@@ -317,12 +320,12 @@ h2 {
     z-index: 2;
     background-color: #3F6592;
     top: -100%;
-    transition: all 0.5s ease 0s;
+    transition: all 0.5s linear;
     overflow: auto;
   }
   .nav-active {
     top: 8px;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s linear;
   }
   .nav-list {
     display: block;
